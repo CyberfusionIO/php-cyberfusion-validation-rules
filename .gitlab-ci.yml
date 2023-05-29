@@ -29,29 +29,20 @@ phpunit:
   coverage: '/^\s*Lines:\s*(\d+\.\d+)\%/'
   variables:
     XDEBUG_MODE: coverage
-  services:
-    - name: mariadb:10.6
   dependencies:
     - composer
   script:
     - php -v
     - php -d memory_limit=4G ./vendor/bin/phpunit --coverage-text --colors=never
-  artifacts:
+  cache:
     paths:
-      - ./storage/logs # for debugging
-    expire_in: 1 days
-    when: on_failure
+      - vendor/
 
 phpstan:
   stage: analysis
-  services:
-    - name: mariadb:10.6
   dependencies:
     - composer
-    - environment
-    - build-database
   script:
-    - ./vendor/bin/phpstan --version
     - php -d memory_limit=4G ./vendor/bin/phpstan analyse -v --no-ansi --no-interaction
   cache:
     paths:
@@ -59,5 +50,10 @@ phpstan:
 
 pint:
   stage: analysis
+  dependencies:
+    - composer
   script:
     - ./vendor/bin/pint --test
+  cache:
+    paths:
+      - vendor/
