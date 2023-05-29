@@ -32,11 +32,7 @@ phpunit:
   dependencies:
     - composer
   script:
-    - php -v
     - php -d memory_limit=4G ./vendor/bin/phpunit --coverage-text --colors=never
-  cache:
-    paths:
-      - vendor/
 
 phpstan:
   stage: analysis
