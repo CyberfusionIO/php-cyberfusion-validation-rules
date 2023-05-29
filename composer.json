@@ -1,0 +1,46 @@
+{
+    "name": "cyberfusion/validation-rules",
+    "description": "A set of validation rules available for all Laravel projects at Cyberfusion",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Roy de Vos Burchart",
+            "email": "roy@goedemiddag.nl",
+            "role": "Developer"
+        },
+        {
+            "name": "Dick van der Heiden",
+            "email": "dick@goedemiddag.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "dragonmantank/cron-expression": "^3.3",
+        "illuminate/support": "^10.12",
+        "s1lentium/iptools": "^1.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.1",
+        "orchestra/testbench": "^8.5"
+    },
+    "license": "Proprietary",
+    "autoload": {
+        "psr-4": {
+            "Cyberfusion\\ValidationRules\\": "src/",
+            "Cyberfusion\\ValidationRules\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cyberfusion\\ValidationRules\\ValidationRulesServiceProvider"
+            ]
+        }
+    }
+}
