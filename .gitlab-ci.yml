@@ -39,6 +39,7 @@ phpstan:
   dependencies:
     - composer
   script:
+    - ./vendor/bin/phpstan --version
     - php -d memory_limit=4G ./vendor/bin/phpstan analyse -v --no-ansi --no-interaction
   cache:
     paths:
@@ -50,6 +51,3 @@ pint:
     - composer
   script:
     - ./vendor/bin/pint --test
-  cache:
-    paths:
-      - vendor/
