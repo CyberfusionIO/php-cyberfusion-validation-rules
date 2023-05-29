@@ -10,6 +10,10 @@ class CommonName implements ValidationRule
 {
     public function passes(mixed $value): bool
     {
+        if (! is_string($value)) {
+            return false;
+        }
+
         // When the commonName contains a wildcard, the wildcard must be the first, i.e. *.example.com,
         // not sub.*.example.com
         if (Str::contains($value, '*') && ! Str::startsWith($value, '*.')) {
