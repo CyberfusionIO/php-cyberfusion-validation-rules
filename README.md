@@ -48,3 +48,32 @@ public function rules(): array
 }
 ```
 
+## Common name
+
+The common name rule can be used to validate if a given value is a valid common name.
+
+```php
+use Cyberfusion\ValidationRules\Rules\CommonName;
+
+public function rules(): array
+{
+    return [
+        'field' => [new CommonName()],
+    ];
+}
+```
+
+## Cron expression
+
+The cron expression rule can be used to validate if a given value is a valid cron expression.
+
+```php
+use Cyberfusion\ValidationRules\Rules\CronExpression;
+
+public function rules(): array
+{
+    return [
+        'field' => [new CronExpression()],
+    ];
+}
+```
