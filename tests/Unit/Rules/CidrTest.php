@@ -4,6 +4,7 @@ namespace Cyberfusion\ValidationRules\Tests\Unit\Rules;
 
 use Cyberfusion\ValidationRules\Rules\Cidr;
 use Cyberfusion\ValidationRules\Tests\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class CidrTest extends TestCase
 {
@@ -28,9 +29,7 @@ class CidrTest extends TestCase
         $this->assertFalse($rule->passes(123456));
     }
 
-    /**
-     * @dataProvider getInvalid
-     */
+    #[DataProvider('getInvalid')]
     public function test_invalid_cidr(string $cidr): void
     {
         $rule = new Cidr();
@@ -38,9 +37,7 @@ class CidrTest extends TestCase
         $this->assertFalse($rule->passes($cidr));
     }
 
-    /**
-     * @dataProvider getValid
-     */
+    #[DataProvider('getValid')]
     public function test_valid_cidr(string $cidr, bool $strictlyValid): void
     {
         $rule = new Cidr();

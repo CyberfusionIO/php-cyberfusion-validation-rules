@@ -4,6 +4,7 @@ namespace Cyberfusion\ValidationRules\Tests\Unit\Rules;
 
 use Cyberfusion\ValidationRules\Rules\CommonName;
 use Cyberfusion\ValidationRules\Tests\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class CommonNameTest extends TestCase
 {
@@ -28,9 +29,7 @@ class CommonNameTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validCommonNames
-     */
+    #[DataProvider('validCommonNames')]
     public function testTrueForValidCommonNames($value): void
     {
         $rule = new CommonName();
@@ -38,9 +37,7 @@ class CommonNameTest extends TestCase
         $this->assertTrue($rule->passes($value));
     }
 
-    /**
-     * @dataProvider invalidCommonNames
-     */
+    #[DataProvider('invalidCommonNames')]
     public function testFalseForInvalidCommonNames($value): void
     {
         $rule = new CommonName();

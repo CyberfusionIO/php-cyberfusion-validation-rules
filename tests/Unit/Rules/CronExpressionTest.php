@@ -4,6 +4,7 @@ namespace Cyberfusion\ValidationRules\Tests\Unit\Rules;
 
 use Cyberfusion\ValidationRules\Rules\CronExpression;
 use Cyberfusion\ValidationRules\Tests\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class CronExpressionTest extends TestCase
 {
@@ -26,9 +27,7 @@ class CronExpressionTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validCronExpressions
-     */
+    #[DataProvider('validCronExpressions')]
     public function testTrueForValidCronExpressions($value): void
     {
         $rule = new CronExpression();
@@ -36,9 +35,7 @@ class CronExpressionTest extends TestCase
         $this->assertTrue($rule->passes($value));
     }
 
-    /**
-     * @dataProvider invalidCronExpressions
-     */
+    #[DataProvider('invalidCronExpressions')]
     public function testFalseForInvalidCronExpressions($value): void
     {
         $rule = new CronExpression();
