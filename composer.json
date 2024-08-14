@@ -21,10 +21,10 @@
         "s1lentium/iptools": "^1.2"
     },
     "require-dev": {
-        "laravel/pint": "^1.10",
+        "orchestra/testbench": "^8.5",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.1",
-        "orchestra/testbench": "^8.5"
+        "symplify/easy-coding-standard": "^12.0"
     },
     "license": "Proprietary",
     "autoload": {
@@ -35,6 +35,18 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "@analyze",
+            "@test:no-coverage",
+            "@lint:check"
+        ],
+        "test:coverage": "vendor/bin/phpunit",
+        "test:no-coverage": "vendor/bin/phpunit --no-coverage",
+        "analyze": "vendor/bin/phpstan analyse",
+        "lint:check": "vendor/bin/ecs",
+        "lint:fix": "vendor/bin/ecs --fix"
     },
     "extra": {
         "laravel": {
