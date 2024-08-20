@@ -26,7 +26,7 @@
         "phpunit/phpunit": "^10.1|^11.0",
         "symplify/easy-coding-standard": "^12.0"
     },
-    "license": "Proprietary",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Cyberfusion\\ValidationRules\\": "src/",
