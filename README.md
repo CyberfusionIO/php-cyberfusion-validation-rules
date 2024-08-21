@@ -1,34 +1,22 @@
-# Validation rules
+# php-cyberfusion-validation-rules
 
-This package contains a set of validation rules available for all Laravel projects at Cyberfusion.
+Library with general-purpose validation rules.
+
+# Install
+
+## Composer
+
+Run the following command to install the package from Packagist:
+
+    composer require cyberfusion/validation-rules
 
 # Usage
 
-## Requirements
+## Rules
 
-This package requires Laravel 10+ and PHP 8.3 or higher.
+### `Cidr`
 
-## Installation
-
-You can install the package via composer:
-
-```bash
-composer require cyberfusion/validation-rules
-```
-
-## Translations
-
-The package includes both English and Dutch translations.
-
-Publish them using the following command:
-
-`php artisan vendor:publish --provider="Cyberfusion\ValidationRules\ValidationRulesServiceProvider" --tag="translations"`
-
-## Available rules
-
-### Cidr
-
-Used to validate if a given value is a valid [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) (i.e. `127.0.0.0/32`). 
+Valid [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) (e.g. `127.0.0.0/32`). 
 
 ```php
 use Cyberfusion\ValidationRules\Rules\Cidr;
@@ -41,9 +29,9 @@ public function rules(): array
 }
 ```
 
-### CommonName
+### `CommonName`
 
-Used to validate if a given value is a valid common name (i.e. `example.com` or `sub.example.com`).
+Valid common name (e.g. `example.com` or `sub.example.com`).
 
 ```php
 use Cyberfusion\ValidationRules\Rules\CommonName;
@@ -56,9 +44,9 @@ public function rules(): array
 }
 ```
 
-### CronExpression
+### `CronExpression`
 
-Used to validate if a given value is a valid cron expression (i.e. `0 0 1 1 *`).
+Valid cron expression (e.g. `0 0 1 1 *`).
 
 ```php
 use Cyberfusion\ValidationRules\Rules\CronExpression;
@@ -71,25 +59,10 @@ public function rules(): array
 }
 ```
 
-## Tests
+## Translations
 
-Unit tests are available in the `tests` directory. Run:
+The package includes English and Dutch translations.
 
-`composer test`
+Publish them using the following command:
 
-To generate a code coverage report in the `build/report` directory, run:
-
-`composer test:coverage`
-
-## Contributing
-
-Contributions are welcome. See the [contributing guidelines](CONTRIBUTING.md).
-
-## Security
-
-If you discover any security related issues, please email support@cyberfusion.io instead of using the issue tracker.
-
-## License
-
-This client is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
+    php artisan vendor:publish --provider="Cyberfusion\ValidationRules\ValidationRulesServiceProvider" --tag="translations"
