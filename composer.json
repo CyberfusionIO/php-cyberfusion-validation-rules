@@ -1,6 +1,6 @@
 {
     "name": "cyberfusion/validation-rules",
-    "description": "A set of validation rules available for all Laravel projects at Cyberfusion",
+    "description": "Library with general-purpose validation rules.",
     "type": "library",
     "authors": [
         {
