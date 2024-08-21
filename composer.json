@@ -1,19 +1,14 @@
 {
     "name": "cyberfusion/validation-rules",
-    "description": "A set of validation rules available for all Laravel projects at Cyberfusion",
+    "description": "Library with general-purpose validation rules.",
     "type": "library",
-    "authors": [
-        {
-            "name": "Roy de Vos Burchart",
-            "email": "roy@goedemiddag.nl",
-            "role": "Developer"
-        },
-        {
-            "name": "Dick van der Heiden",
-            "email": "dick@goedemiddag.nl",
-            "role": "Developer"
-        }
-    ],
+    "license": "MIT",
+    "support": {
+        "security": "https://cyberfusion.io/content/responsible-disclosure-policy",
+        "email": "support@cyberfusion.io"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^8.3",
         "dragonmantank/cron-expression": "^3.3",
@@ -26,15 +21,18 @@
         "phpunit/phpunit": "^10.1|^11.0",
         "symplify/easy-coding-standard": "^12.0"
     },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Cyberfusion\\ValidationRules\\": "src/",
-            "Cyberfusion\\ValidationRules\\Tests\\": "tests/"
-        }
-    },
     "config": {
         "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Cyberfusion\\ValidationRules\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cyberfusion\\ValidationRules\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "test": [
