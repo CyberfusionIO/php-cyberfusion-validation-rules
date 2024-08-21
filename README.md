@@ -66,3 +66,4 @@ The package includes English and Dutch translations.
 Publish them using the following command:
 
     php artisan vendor:publish --provider="Cyberfusion\ValidationRules\ValidationRulesServiceProvider" --tag="translations"
+
