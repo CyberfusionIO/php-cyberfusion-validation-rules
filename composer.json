@@ -2,6 +2,7 @@
     "name": "cyberfusion/validation-rules",
     "description": "Library with general-purpose validation rules.",
     "type": "library",
+    "license": "MIT",
     "support": {
         "security": "https://cyberfusion.io/content/responsible-disclosure-policy",
         "email": "support@cyberfusion.io"
@@ -18,15 +19,18 @@
         "phpunit/phpunit": "^10.1|^11.0",
         "symplify/easy-coding-standard": "^12.0"
     },
-    "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Cyberfusion\\ValidationRules\\": "src/",
-            "Cyberfusion\\ValidationRules\\Tests\\": "tests/"
         }
     },
-    "config": {
-        "sort-packages": true
+    "autoload-dev": {
+        "psr-4": {
+            "Cyberfusion\\ValidationRules\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "test": [
@@ -46,5 +50,6 @@
                 "Cyberfusion\\ValidationRules\\ValidationRulesServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
