@@ -2,18 +2,10 @@
     "name": "cyberfusion/validation-rules",
     "description": "Library with general-purpose validation rules.",
     "type": "library",
-    "authors": [
-        {
-            "name": "Roy de Vos Burchart",
-            "email": "roy@goedemiddag.nl",
-            "role": "Developer"
-        },
-        {
-            "name": "Dick van der Heiden",
-            "email": "dick@goedemiddag.nl",
-            "role": "Developer"
-        }
-    ],
+    "support": {
+        "security": "https://cyberfusion.io/content/responsible-disclosure-policy",
+        "email": "support@cyberfusion.io"
+    },
     "require": {
         "php": "^8.3",
         "dragonmantank/cron-expression": "^3.3",
