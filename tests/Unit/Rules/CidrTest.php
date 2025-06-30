@@ -53,7 +53,7 @@ class CidrTest extends TestCase
     {
         $rule = new Cidr();
 
-        $this->assertSame(__('cyberfusion_validation_rules.cidr'), $rule->message());
+        $this->assertSame(__('cyberfusion_validation_rules::messages.cidr'), $rule->message());
     }
 
     public static function getValid(): array

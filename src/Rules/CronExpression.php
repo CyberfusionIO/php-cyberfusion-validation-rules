@@ -19,7 +19,7 @@ class CronExpression implements ValidationRule
 
     public function message(): string
     {
-        return __('cyberfusion_validation_rules.cron_expression');
+        return __('cyberfusion_validation_rules::messages.cron_expression');
     }
 
     public function validate(string $attribute, mixed $value, Closure $fail): void

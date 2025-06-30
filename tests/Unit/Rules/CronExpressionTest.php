@@ -47,6 +47,6 @@ class CronExpressionTest extends TestCase
     {
         $rule = new CronExpression();
 
-        $this->assertSame(__('cyberfusion_validation_rules.cron_expression'), $rule->message());
+        $this->assertSame(__('cyberfusion_validation_rules::messages.cron_expression'), $rule->message());
     }
 }
