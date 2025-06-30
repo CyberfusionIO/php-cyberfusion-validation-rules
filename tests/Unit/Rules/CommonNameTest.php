@@ -49,6 +49,6 @@ class CommonNameTest extends TestCase
     {
         $rule = new CommonName();
 
-        $this->assertSame(__('cyberfusion_validation_rules.common_name'), $rule->message());
+        $this->assertSame(__('cyberfusion_validation_rules::messages.common_name'), $rule->message());
     }
 }
