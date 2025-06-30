@@ -56,7 +56,7 @@ class Cidr implements ValidationRule
 
     public function message(): string
     {
-        return __('cyberfusion_validation_rules.cidr');
+        return __('cyberfusion_validation_rules::messages.cidr');
     }
 
     public function validate(string $attribute, mixed $value, Closure $fail): void

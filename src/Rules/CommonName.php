@@ -35,7 +35,7 @@ class CommonName implements ValidationRule
 
     public function message(): string
     {
-        return __('cyberfusion_validation_rules.common_name');
+        return __('cyberfusion_validation_rules::messages.common_name');
     }
 
     public function validate(string $attribute, mixed $value, Closure $fail): void
